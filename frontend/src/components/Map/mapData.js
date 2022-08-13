@@ -1,4 +1,4 @@
-export const markerdata = [
+export const photoBoxData = [
   {
     title: "콜드스퀘어",
     lat: 37.62197524055062,

@@ -13,8 +13,8 @@ class CheckSerializer(serializers.ModelSerializer):
 # 포토박스 시리얼라이저, api에 보여줄 필드 명시
 class PhotoBoxSerializer(serializers.ModelSerializer):
     class Meta:
-        photoBox = PhotoBox
-        fields = '__all__'
+        model = PhotoBox
+        fields = ['title', 'lat', 'lon']
 
 
 

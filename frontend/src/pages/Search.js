@@ -1,20 +1,35 @@
 // src/pages/Search.js
 
-import React from "react";
+import React, { useState } from "react";
 import Map from "../components/Map/MapContent"
 // import MapCompo from "../components/Map/Map"
 import styled from 'styled-components';
 
 const Search = () => {
-  return (
-    <>
-      <Header>
-        <Title>사진관 검색</Title>
-        <Icon src="/icon/search-icon.svg"></Icon>
-      </Header>
-      <Map/>
-    </>
-  );
+  const [showing, setShowing] = useState(false);
+  const searchShowing = () => setShowing(!showing);
+  if (showing){
+    return(
+      <>
+        <Header>
+          <Title>사진관 검색</Title>
+          <Icon src="/icon/search-icon.svg" onClick={searchShowing}></Icon>
+        </Header>
+        <Map/>
+      </>
+    );
+  }
+  else{
+    return (
+      <>
+        <Header>
+          <Title>사진관 검색해!</Title>
+          <Icon src="/icon/search-icon.svg" onClick={searchShowing}></Icon>
+        </Header>
+        <Map/>
+      </>
+    );
+  }
 }
 
 export default Search;
@@ -45,4 +60,5 @@ const Icon = styled.img`
   position: absolute;
   bottom: 32px;
   right: 35px;
+  cursor: pointer;
 `

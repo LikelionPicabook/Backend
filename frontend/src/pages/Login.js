@@ -22,13 +22,14 @@ const Login= () => {
       password: password
     }
 
-    Axios.post('/api/v1/mysite/rest_auth/login/', user)
+    Axios.post('/api/rest-auth/login', user)
       .then(res => {
+        console.log("여기로 들어오긴 하나?!")
         if (res.data.key) {
           localStorage.clear()
           localStorage.setItem('token', res.data.key)
           // 사용하려면 App.js에서 /로 라우팅해야 한다
-          window.location.replace('/')
+          window.location.replace('/login')
         } else {
           setEmail('')
           setPassword('')
@@ -45,8 +46,8 @@ const Login= () => {
   }
 
   return (
-    <>
-      <div class="title">PICABOOK</div>
+    <Background>
+      <div className="title">PICABOOK</div>
       <section className='log_section'>
         <LoginDiv>
           {errors === true && <h2>Cannot log in with provided credentials</h2>}
@@ -88,8 +89,15 @@ const Login= () => {
         </div>
       </section>
       <div className="nosign">비회원으로 시작</div>
-    </>
+    </Background>
   )
 }
 
 export default Login;
+
+
+const Background = styled.div`
+  background-color: white;
+  height: 100%;
+  width: 100%;
+`

@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import User from './components/User'
 import Start from './pages/Start'
 import styled from 'styled-components';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 
 const App = () => {
@@ -14,6 +16,8 @@ const App = () => {
         <Frame>
           <Routes>
             <Route path="/*" element={<Start/>} />
+            <Route path="/login" element={<Login/>}/>	
+            <Route path="/signup" element={<Signup/>}/>	
             <Route path="/user/*" element={<User/>} />
           </Routes>
         </Frame>

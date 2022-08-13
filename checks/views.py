@@ -28,7 +28,8 @@ def create_check(request):
 
 @api_view(['GET'])
 def search_photobox(request):
-    photoBox = PhotoBox.objects.all()
-    serializer = PhotoBoxSerializer(photoBox, many = True)
+    photoBoxs = PhotoBox.objects.all()
+    serializer = PhotoBoxSerializer(photoBoxs, many = True)
 
     return Response(serializer.data)
+
