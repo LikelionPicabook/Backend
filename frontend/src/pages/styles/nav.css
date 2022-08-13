@@ -1,0 +1,44 @@
+.nav-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration : none;
+  color : #b9b9b9;
+  height: 70px;
+}
+
+.nav-linkactivated1,
+.nav-linkactivated2,
+.nav-linkactivated3,
+.nav-linkactivated4,
+.nav-linkactivated5{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration : none;
+  color : #9848ff;
+  height: 70px;
+}
+
+.nav-linkactivated1 img{
+  content:url("../../../public/icon/home-active.svg")
+}
+.nav-linkactivated2 img{
+  content:url("../../../public/icon/search-active.svg")
+}
+.nav-linkactivated3 img{
+  content:url("../../../public/icon/edit-active.svg")
+}
+.nav-linkactivated4 img{
+  content:url("../../../public/icon/cart-active.svg")
+}
+.nav-linkactivated5 img{
+  content:url("../../../public/icon/camera-active.svg")
+}
+
+.nav-link:first-child,
+.nav-linkactivated1{
+  margin-right: 5px;
+}

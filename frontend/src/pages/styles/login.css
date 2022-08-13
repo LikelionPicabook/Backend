@@ -1,0 +1,135 @@
+
+
+.title {
+  position: absolute;
+  top: 113px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: min-content;
+  font-weight: 700;
+  font-size: 22px;
+  color: #9747FF;
+}
+
+.log_section {
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_input {
+  font-size: 12px;
+  font-weight: 300;
+  color: #b9b9b9;
+
+  width: 321px;
+  height: 39px;
+  padding-left: 16px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+}
+
+.login_check {
+  font-size: 12px;
+  color: #494949;
+
+  display: flex;
+  align-items: center;
+}
+
+.login_check input{
+  width: 24px;
+  height: 24px;
+  margin: 0 10px 0 5px;
+}
+
+.login_btn {
+  width: 321px;
+  height: 40px;
+  margin-top: 41px;
+  color: white;
+  border: none;
+  background: linear-gradient(91.96deg, #9747FF 15.31%, #87A1FF 88.37%);
+  border-radius: 22.5px;
+  box-sizing: border-box;
+}
+
+.login_option{
+  display: flex;
+  margin-top: 22px;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_option button{
+  border: none;
+  background-color: transparent;
+  margin-right: 25px;
+  padding: 0;
+
+  font-size: 12px;
+  color: #494949;
+  font-weight: 400;
+}
+
+.login_option button:last-child{
+  margin-right: 0;
+}
+
+.signin_sns{
+  margin-top: 30px;
+}
+
+.signin_sns p{
+  font-size: 12px;
+  color: #494949;
+  font-weight: 400;
+  text-align: center;
+  margin: 16px;
+}
+
+.signin_option{
+  display: flex;
+  margin-top: 22px;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin_option button{
+  width: 41px;
+  height: 41px;
+  border: none;
+
+  margin-right: 53px;
+}
+
+.signin_option button:last-child{
+  margin-right: 0;
+}
+
+.nosign{
+  position: absolute;
+  bottom: 67px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 107px;
+  color: #494949;
+  font-size: 14px;
+}
