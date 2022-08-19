@@ -14,37 +14,37 @@ const Login= () => {
   const [password, setPassword] = useState('')
   const [errors, setErrors] = useState(false)
 
+  
+
   const onSubmit = (e) => {
     e.preventDefault()
-
+    
     const user = {
+      username: email,
       email: email,
       password: password
     }
-
-    Axios.post('/api/rest-auth/login', user)
-      .then(res => {
-        console.log("여기로 들어오긴 하나?!")
-        if (res.data.key) {
-          localStorage.clear()
-          localStorage.setItem('token', res.data.key)
-          // 사용하려면 App.js에서 /로 라우팅해야 한다
-          window.location.replace('/login')
-        } else {
-          setEmail('')
-          setPassword('')
-          localStorage.clear()
-          setErrors(true)
-        }
-      })
-      .catch(err => {
-        console.clear()
-        alert('아이디 또는 비밀번호가 일치하지 않습니다')
-        setEmail('')
-        setPassword('')
-      })
+    
+    // 이거 post 는 데이터 보내는거고 get 은 받는거  get('받아갈 주소', 받을)
+    Axios.post('http://127.0.0.1:8000/rest-auth/login/',user)
+    .then(res => {
+      console.log(user);
+      console.log(res.data);
+      localStorage.clear();
+      localStorage.setItem('token',res.data.key)
+      window.location.replace('http://localhost:3000/user/home')
+    })
+    .catch(err=>{
+      console.log(user);
+      console.log(err)
+      alert('로그인 안댐')
+      setEmail('')
+      setPassword('')
+    })
   }
+  
 
+  
   return (
     <Background>
       <div className="title">PICABOOK</div>
@@ -101,3 +101,4 @@ const Background = styled.div`
   height: 100%;
   width: 100%;
 `
+

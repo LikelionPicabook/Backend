@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^0(59g^!bpzp91)@+hoz905j8%+52z8+5$@5b%v591_^e0$l)@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites', # regisetration
     
+    #검색
+    'django_filters',
+
     # DRF
     'rest_framework',
     'rest_framework.authtoken',
@@ -53,6 +56,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'rest_auth.registration',
+
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +68,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'PackMan.urls'
@@ -156,3 +164,8 @@ REST_FRAMEWORK = {
 }
 
 SITE_ID = 1
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000/",
+    "http://127.0.0.1:8000/",
+]

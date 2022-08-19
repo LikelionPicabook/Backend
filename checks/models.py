@@ -25,7 +25,7 @@ class PhotoBox(models.Model):
     # data type assign
     title = models.CharField(max_length=200) # 사진관 이름
     # 위도
-    lat = models.DecimalField(max_digits=16, decimal_places=14)
+    lat = models.DecimalField(max_digits=17, decimal_places=15)
     # 경도
     lon = models.DecimalField(max_digits=17, decimal_places=14)
     

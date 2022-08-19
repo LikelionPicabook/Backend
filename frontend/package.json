@@ -8,12 +8,15 @@
     "@testing-library/user-event": "^13.2.1",
     "antd": "^4.22.3",
     "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "style-components": "^0.1.0",
     "styled-components": "^5.3.5",
+    "swiper": "^6.8.1",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -40,5 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8000"
+  "proxy": "http://127.0.0.1:8000/"
 }

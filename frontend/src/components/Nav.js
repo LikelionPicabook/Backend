@@ -16,15 +16,15 @@ const Nav = () => {
         <img src="/icon/search.svg"></img>
         <Title>사진관찾기</Title>
       </NavLink>
-      <NavLink to="/user/#" className={({ isActive }) => "nav-link" + (isActive ? "activated3" : "")}>
+      <NavLink to="/user/photobook" className={({ isActive }) => "nav-link" + (isActive ? "activated3" : "")}>
         <img src="/icon/edit.svg"></img>
         <Title>포토북 제작</Title>
       </NavLink>
-      <NavLink to="/user/#" className={({ isActive }) => "nav-link" + (isActive ? "activated4" : "")}>
+      <NavLink to="/user/monthly" className={({ isActive }) => "nav-link" + (isActive ? "activated4" : "")}>
         <img src="/icon/cart.svg"></img>
         <Title>월간 포꾸</Title>
       </NavLink>
-      <NavLink to="/user/#" className={({ isActive }) => "nav-link" + (isActive ? "activated5" : "")}>
+      <NavLink to="/user/tips" className={({ isActive }) => "nav-link" + (isActive ? "activated5" : "")}>
         <img src="/icon/camera.svg"></img>
         <Title>사진찍기꿀팁</Title>
       </NavLink>

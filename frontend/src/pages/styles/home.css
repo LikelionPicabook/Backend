@@ -1,0 +1,149 @@
+.header-home{
+  position: absolute;
+  top: 0;
+  height: 110px;
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid #d5d5d5;
+  padding: 60px 25px 10px 20px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+header a{
+  width: 24px;
+  height: 24px;
+}
+
+.searchbar{
+  border: 1px solid #c0c0c0;
+  border-radius: 21.5px;
+
+  height: 31px;
+  width: 268px;
+  padding: 10px;
+  padding-left: 3px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchbar input{
+  font-size: 10px;
+  width: 85%;
+  border: none;
+}
+
+.searchbar input::placeholder{
+  color: #b1b1b1;
+  font-weight: 350;
+}
+
+.searchbar input:focus{
+  outline: none;
+}
+
+.searchbar button{
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+.searchbar button img{
+  width: 20px;
+  height: 19px;
+}
+
+header button{
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+.container{
+  position: absolute;
+  top:110px;
+  width: 375px;
+  height: 612px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.container::-webkit-scrollbar {
+  width: 1.5px;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.container section{
+  width: 375px;
+  height: max-content;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(217, 217, 217, 0.47);
+
+  padding: 20px 0px 20px 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+
+section .section-title{
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b1b1b;
+}
+
+section .section-sub{
+  font-size: 10px;
+  color: #838383;
+  font-weight: 350;
+  padding-left: 3px;
+  padding-top: 3px;
+}
+
+section .section-content{
+  display: flex;
+  margin-top: 18px;
+  overflow-x: scroll;
+}
+
+.section-content::-webkit-scrollbar {
+  height: 5px;
+}
+.section-content::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.section-content::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.section-content div{
+  text-align: center;
+  font-size: 11px;
+  margin-right: 10px;
+}
+.section-content div:last-child{
+  margin-right:15px;
+}
+.section-content div p{
+  display: block;
+  margin: 8px 0 10px 0;
+  white-space:nowrap;
+}
